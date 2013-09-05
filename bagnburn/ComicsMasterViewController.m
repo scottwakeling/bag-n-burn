@@ -120,8 +120,7 @@
 
         //  The data model needs at least a title..
         if ([addController.comicData.title length] > 0) {
-            [self.dataController addComicWithTitle:addController.comicData.title publisher:addController.comicData.publisher andCover:addController.comicData.coverImage atIndex:0];
-            
+            [self.dataController addComic:addController.comicData atIndex:0];
             [[self tableView] reloadData];
         }
     }

@@ -9,7 +9,7 @@
 
 #import "ComicDataController.h"
 #import "Comic.h"
-
+#import "ComicData.h"
 
 @implementation ComicDataController
 
@@ -51,22 +51,24 @@
 }
 
 
-//  Add a new Comic and persist it to the Store
-- (void)addComicWithTitle:(NSString *)title publisher:(NSString *)publisher andCover:(UIImage *)coverImage atIndex:(int)index {
+//
+- (void)addComic:(ComicData *)comicData atIndex:(int)index {
     
     //  Create and init a new instance of the Comic entity
     Comic *comic = (Comic *)[NSEntityDescription insertNewObjectForEntityForName:@"Comic" inManagedObjectContext:managedObjectContext];
-    
-    [comic setTitle:title];
-    [comic setPublisher:publisher];
+
+    [comic setCoverArt:[NSData dataWithData:UIImagePNGRepresentation(comicData.coverImage)]]; //data!
+    [comic setTitle:comicData.title];
+    [comic setPublisher:comicData.publisher];
+    [comic setIssue:comicData.issue];
+    [comic setVolume:comicData.volume];
+    [comic setWriter:comicData.writer];
+    [comic setArtist:comicData.artist];
+    [comic setColourist:comicData.colourist];
+    [comic setLetterer:comicData.letterer];
+    [comic setNotes:comicData.notes];
     [comic setBagOrBurn:[NSNumber numberWithBool:TRUE]];
     [comic setList:[NSNumber numberWithInt:comicListType]];
-
-    //  TODO: This takes time - cache the NSData rep in AddComic stage - the UIImage data might be getting
-    //  purged so this causes that to reload before the conversion can happen..maybe keep the NSData
-    //  when you know you can get it without a cache miss
-    //  TODO: OR, at the least, showing a 'Saving..' progress dial or something?
-    [comic setCoverArt:[NSData dataWithData:UIImagePNGRepresentation(coverImage)]];
     
     //  Persist the new Comic entity instance to the store
     NSError *error = nil;

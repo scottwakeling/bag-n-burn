@@ -245,7 +245,7 @@
         NSInteger index = carousel.currentItemIndex + 1;
         
         //  Add to the data model
-        [self.dataController addComicWithTitle:comicData.title publisher:comicData.publisher andCover:comicData.coverImage atIndex:index];
+        [self.dataController addComic:comicData atIndex:index];
         
         //  Add to the carousel
         [carousel insertItemAtIndex:index animated:YES];

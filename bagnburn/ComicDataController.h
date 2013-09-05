@@ -17,6 +17,7 @@ typedef enum {
 
 
 @class Comic;
+@class ComicData;
 
 @interface ComicDataController : NSObject {
     NSMutableArray *comicsArray;
@@ -30,7 +31,7 @@ typedef enum {
 - (id)initWithComicListType:(CODComicListType)type;
 - (NSUInteger)countOfList;
 - (Comic *)comicAtIndex:(NSUInteger)index;
-- (void)addComicWithTitle:(NSString *)title publisher:(NSString *)publisher andCover:(UIImage *)coverImage atIndex:(int)index;
+- (void)addComic:(ComicData *)comicData atIndex:(int)index;
 - (void)changeComicStatusAtIndex:(NSUInteger)index toStatus:(BOOL)status;
 - (void)deleteComicAtIndex:(NSUInteger)index;
 
