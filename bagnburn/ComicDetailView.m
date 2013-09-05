@@ -68,13 +68,15 @@
     
     // Volume
     if (self.comicData.volume) {
-        [self drawText:[NSString stringWithFormat:@"Volume %@", self.comicData.volume] withFont:font atYPos:yPos];
+        text = [NSString stringWithFormat:@"Volume %@", self.comicData.volume];
+        [self drawText:text withFont:font atYPos:yPos];
         yPos += [text sizeWithFont:font].height + padding;
     }
 
     // Publisher
-    if (self.comicData.publisher) {
-        [self drawText:[NSString stringWithFormat:@"Published by %@", self.comicData.publisher] withFont:font atYPos:yPos];
+    if (self.comicData.publisher.length) {
+        text = [NSString stringWithFormat:@"Published by %@", self.comicData.publisher];
+        [self drawText:text withFont:font atYPos:yPos];
         yPos += [text sizeWithFont:font].height + padding;
     }
 
@@ -82,26 +84,30 @@
     font = [UIFont systemFontOfSize:14];
 
     // Writer
-    if (self.comicData.writer) {
-        [self drawText:[NSString stringWithFormat:@"Written by %@", self.comicData.writer] withFont:font atYPos:yPos];
+    if (self.comicData.writer.length) {
+        text = [NSString stringWithFormat:@"Written by %@", self.comicData.writer];
+        [self drawText:text withFont:font atYPos:yPos];
         yPos += [text sizeWithFont:font].height + padding;
     }
     
     // Art
-    if (self.comicData.artist) {
-        [self drawText:[NSString stringWithFormat:@"Art by %@", self.comicData.artist] withFont:font atYPos:yPos];
+    if (self.comicData.artist.length) {
+        text = [NSString stringWithFormat:@"Art by %@", self.comicData.artist];
+        [self drawText:text withFont:font atYPos:yPos];
         yPos += [text sizeWithFont:font].height + padding;
     }
     
     // Colours
-    if (self.comicData.colourist) {
-        [self drawText:[NSString stringWithFormat:@"Colours by %@", self.comicData.colourist] withFont:font atYPos:yPos];
+    if (self.comicData.colourist.length) {
+        text = [NSString stringWithFormat:@"Colours by %@", self.comicData.colourist];
+        [self drawText:text withFont:font atYPos:yPos];
         yPos += [text sizeWithFont:font].height + padding;
     }
     
     // Letters
-    if (self.comicData.letterer) {
-        [self drawText:[NSString stringWithFormat:@"Letters by %@", self.comicData.letterer] withFont:font atYPos:yPos];
+    if (self.comicData.letterer.length) {
+        text = [NSString stringWithFormat:@"Letters by %@", self.comicData.letterer];
+        [self drawText:text withFont:font atYPos:yPos];
         yPos += [text sizeWithFont:font].height + padding;
     }
     
@@ -109,7 +115,7 @@
     font = [UIFont systemFontOfSize:12];
 
     // Notes
-    if (self.comicData.notes) {        
+    if (self.comicData.notes.length) {
         CGFloat notesHeight = self.bounds.size.height - yPos;
         CGRect notesRect = CGRectMake(0.f, yPos, self.bounds.size.width, notesHeight);
         [self.comicData.notes drawInRect:notesRect withFont:font lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentCenter];
