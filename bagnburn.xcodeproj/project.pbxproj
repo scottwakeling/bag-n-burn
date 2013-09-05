@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2077E3117D8B05800FFA9E5 /* ComicDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2077E3017D8B05800FFA9E5 /* ComicDetailView.m */; };
 		D234753817BCDF600027E871 /* BagBurnSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = D234753717BCDF600027E871 /* BagBurnSwitch.m */; };
 		D26E9B5217C36ABB0004BC2B /* pullTabItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D26E9B5117C36ABB0004BC2B /* pullTabItem.png */; };
 		D26E9B5617C3B5AB0004BC2B /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = D26E9B5517C3B5AB0004BC2B /* iCarousel.m */; };
@@ -44,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D2077E2F17D8B05800FFA9E5 /* ComicDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicDetailView.h; sourceTree = "<group>"; };
+		D2077E3017D8B05800FFA9E5 /* ComicDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicDetailView.m; sourceTree = "<group>"; };
 		D234753517BCD1EB0027E871 /* 1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 1.1.xcdatamodel; sourceTree = "<group>"; };
 		D234753617BCDF600027E871 /* BagBurnSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BagBurnSwitch.h; sourceTree = "<group>"; };
 		D234753717BCDF600027E871 /* BagBurnSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BagBurnSwitch.m; sourceTree = "<group>"; };
@@ -95,7 +98,7 @@
 		D2FE7F8717CA678500C4FC01 /* wishTabItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wishTabItem.png; sourceTree = "<group>"; };
 		D2FEF5D317D76B2F00F683F1 /* ComicData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicData.h; sourceTree = "<group>"; };
 		D2FEF5D417D76B2F00F683F1 /* ComicData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicData.m; sourceTree = "<group>"; };
-		D2FEF5D617D77EDF00F683F1 /* 1.4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.4.xcdatamodel; sourceTree = "<group>"; };
+		D2FEF5D617D77EDF00F683F1 /* 1.4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 1.4.xcdatamodel; sourceTree = "<group>"; };
 		D2FEF5D717D78BF000F683F1 /* missing_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missing_cover.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +119,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2077E2E17D8AFFA00FFA9E5 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D234753617BCDF600027E871 /* BagBurnSwitch.h */,
+				D234753717BCDF600027E871 /* BagBurnSwitch.m */,
+				D2077E2F17D8B05800FFA9E5 /* ComicDetailView.h */,
+				D2077E3017D8B05800FFA9E5 /* ComicDetailView.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		D255D0AB17BB776200286A95 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +145,7 @@
 		D255D0AC17BB778000286A95 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D2077E2E17D8AFFA00FFA9E5 /* views */,
 				D2CD9E7A17B8E18500640BCD /* MainStoryboard.storyboard */,
 				D2C6CF5117C6976D001E7F59 /* ComicDetailViewController.h */,
 				D2C6CF5217C6976D001E7F59 /* ComicDetailViewController.m */,
@@ -138,12 +153,8 @@
 				D2CD9E8F17B8F97800640BCD /* ComicEditViewController.m */,
 				D2CD9E7D17B8E18500640BCD /* ComicsMasterViewController.h */,
 				D2CD9E7E17B8E18500640BCD /* ComicsMasterViewController.m */,
-				D234753617BCDF600027E871 /* BagBurnSwitch.h */,
-				D234753717BCDF600027E871 /* BagBurnSwitch.m */,
 				D26E9B5917C3B66B0004BC2B /* ComicCoverViewController.h */,
 				D26E9B5A17C3B66C0004BC2B /* ComicCoverViewController.m */,
-				D2FEF5D317D76B2F00F683F1 /* ComicData.h */,
-				D2FEF5D417D76B2F00F683F1 /* ComicData.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -217,6 +228,8 @@
 		D2CD9E6817B8E18500640BCD /* bagnburn */ = {
 			isa = PBXGroup;
 			children = (
+				D2FEF5D317D76B2F00F683F1 /* ComicData.h */,
+				D2FEF5D417D76B2F00F683F1 /* ComicData.m */,
 				D26E9B5317C3B4C80004BC2B /* iCarousel */,
 				D286220D17BE605C002CEB48 /* sounds */,
 				D255D11917BBC03500286A95 /* images */,
@@ -333,6 +346,7 @@
 				D26E9B5B17C3B66C0004BC2B /* ComicCoverViewController.m in Sources */,
 				D2C6CF5317C6976E001E7F59 /* ComicDetailViewController.m in Sources */,
 				D2FEF5D517D76B2F00F683F1 /* ComicData.m in Sources */,
+				D2077E3117D8B05800FFA9E5 /* ComicDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,9 +10,12 @@
 #import "ComicEditViewController.h"
 #import "Comic.h"
 #import "ComicData.h"
+#import "ComicDetailView.h"
 
 
 @interface ComicDetailViewController ()
+
+@property (nonatomic, strong) ComicDetailView *comicDetailView;
 
 @end
 
@@ -38,16 +41,12 @@
 {
     [super viewDidLoad];
     
-    self.imageCover.image = [self comicCoverPNG];
-    self.labelTitle.text = self.comic.title;
-    self.labelPublisher.text = self.comic.publisher;
-    self.labelIssue.text = [NSString stringWithFormat:@"%@", self.comic.issue];
-    self.labelVolume.text = [NSString stringWithFormat:@"%@", self.comic.volume];
-    self.labelWriter.text = self.comic.writer;
-    self.labelArtist.text = self.comic.artist;
-    self.labelColourist.text = self.comic.colourist;
-    self.labelLetterer.text = self.comic.letterer;
-    self.labelNotes.text = self.comic.notes;
+    //  Create the comic detail view where we custom render all our info
+	ComicDetailView *localComicDetailView = [[ComicDetailView alloc] initWithFrame:self.view.bounds];
+	self.comicDetailView = localComicDetailView;
+	self.comicDetailView.comicData = [[ComicData alloc] initWithManagedComic:self.comic andCoverImage:self.comicCoverPNG];
+	[self.view addSubview:self.comicDetailView];
+	self.comicDetailView.viewController = self;
 }
 
 
@@ -86,16 +85,8 @@
     
     if ([comicData.title length] > 0) {
         //  Update UI
-        self.imageCover.image = comicData.coverImage;
-        self.labelTitle.text = comicData.title;
-        self.labelPublisher.text = comicData.publisher;
-        self.labelIssue.text = [NSString stringWithFormat:@"%@", comicData.issue];
-        self.labelVolume.text = [NSString stringWithFormat:@"%@", comicData.volume];
-        self.labelWriter.text = comicData.writer;
-        self.labelArtist.text = comicData.artist;
-        self.labelColourist.text = comicData.colourist;
-        self.labelLetterer.text = comicData.letterer;
-        self.labelNotes.text = comicData.notes;
+        self.comicDetailView.comicData = comicData;
+        [self.comicDetailView setNeedsDisplay];
         
         //  Notify our edit delegate
         [self.editDelegate updateCurrentComicWithData:comicData];

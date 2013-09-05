@@ -175,22 +175,22 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "bagnburn/ComicDetailViewController.m"
-         timestampString = "400071491.706655"
+         timestampString = "400081915.625542"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "128"
-         endingLineNumber = "128">
+         startingLineNumber = "119"
+         endingLineNumber = "119">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "bagnburn/ComicDetailViewController.m"
-         timestampString = "400071491.706655"
+         timestampString = "400081915.625542"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "164"
-         endingLineNumber = "164">
+         startingLineNumber = "155"
+         endingLineNumber = "155">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -495,19 +495,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "bagnburn/ComicDetailViewController.m"
-         timestampString = "400071491.706655"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "89"
-         endingLineNumber = "89"
-         landmarkName = "-doneEdit:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "bagnburn/ComicEditViewController.m"
          timestampString = "400061642.54698"
          startingColumnNumber = "9223372036854775807"
@@ -522,11 +509,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "bagnburn/ComicDetailViewController.m"
-         timestampString = "400071491.706655"
+         timestampString = "400081915.625542"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "76"
-         endingLineNumber = "76"
+         startingLineNumber = "75"
+         endingLineNumber = "75"
          landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -535,11 +522,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "bagnburn/ComicDetailViewController.m"
-         timestampString = "400071491.706655"
+         timestampString = "400081915.625542"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "77"
-         endingLineNumber = "77"
+         startingLineNumber = "76"
+         endingLineNumber = "76"
          landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>
