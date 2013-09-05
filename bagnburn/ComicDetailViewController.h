@@ -20,7 +20,15 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageCover;
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+@property (weak, nonatomic) IBOutlet UILabel *labelIssue;
+@property (weak, nonatomic) IBOutlet UILabel *labelVolume;
 @property (weak, nonatomic) IBOutlet UILabel *labelPublisher;
+@property (weak, nonatomic) IBOutlet UILabel *labelWriter;
+@property (weak, nonatomic) IBOutlet UILabel *labelArtist;
+@property (weak, nonatomic) IBOutlet UILabel *labelColourist;
+@property (weak, nonatomic) IBOutlet UILabel *labelLetterer;
+@property (weak, nonatomic) IBOutlet UILabel *labelNotes;
+
 
 - (void)doneEdit:(ComicData *)comicData;
 

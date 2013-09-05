@@ -41,6 +41,13 @@
     self.imageCover.image = [self comicCoverPNG];
     self.labelTitle.text = self.comic.title;
     self.labelPublisher.text = self.comic.publisher;
+    self.labelIssue.text = [NSString stringWithFormat:@"%@", self.comic.issue];
+    self.labelVolume.text = [NSString stringWithFormat:@"%@", self.comic.volume];
+    self.labelWriter.text = self.comic.writer;
+    self.labelArtist.text = self.comic.artist;
+    self.labelColourist.text = self.comic.colourist;
+    self.labelLetterer.text = self.comic.letterer;
+    self.labelNotes.text = self.comic.notes;
 }
 
 
@@ -77,16 +84,20 @@
 //
 - (void)doneEdit:(ComicData *)comicData {
     
-    //  The data model needs at least a title..
     if ([comicData.title length] > 0) {
-        
-        //  Edits were (maybe) made, so update the data controller (and refresh the carousel?)        
+        //  Update UI
         self.imageCover.image = comicData.coverImage;
         self.labelTitle.text = comicData.title;
         self.labelPublisher.text = comicData.publisher;
-        //  TODO: set other properties here when you have controls for them
+        self.labelIssue.text = [NSString stringWithFormat:@"%@", comicData.issue];
+        self.labelVolume.text = [NSString stringWithFormat:@"%@", comicData.volume];
+        self.labelWriter.text = comicData.writer;
+        self.labelArtist.text = comicData.artist;
+        self.labelColourist.text = comicData.colourist;
+        self.labelLetterer.text = comicData.letterer;
+        self.labelNotes.text = comicData.notes;
         
-        //  Notify our edit delegate, it has the data controller to do updates on
+        //  Notify our edit delegate
         [self.editDelegate updateCurrentComicWithData:comicData];
     }
 }
