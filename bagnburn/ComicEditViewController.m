@@ -91,10 +91,10 @@
 
 //
 //  Cache provided comic data and reset the UI to display it
-- (void)resetForManagedComic: (Comic*)managedComic andCoverImage:(UIImage*)coverImage {
+- (void)resetForExistingComic: (ComicData*)existingComic {
     
-    //  Cache the comic details in a DTO
-    self.comicData = [[ComicData alloc] initWithManagedComic:managedComic andCoverImage:coverImage];
+    //  Cache the comic details and use them to reset the UI
+    self.comicData = existingComic;
     
     //  Reset the UI to show the comic's details
     [self resetUIFromComicData];

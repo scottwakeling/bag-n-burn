@@ -62,7 +62,7 @@
         editViewController.editDelegate = self;
         
         //  Pass current details to edit view for editing
-        [editViewController resetForManagedComic:self.comic andCoverImage:comicCoverPNG];
+        [editViewController resetForExistingComic:[[ComicData alloc] initWithManagedComic:self.comic andCoverImage:comicCoverPNG]];
         
         //  Set the title of the nav bar
         [editViewController.navigationItem setTitle:@"Edit"];

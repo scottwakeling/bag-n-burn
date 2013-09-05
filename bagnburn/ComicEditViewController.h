@@ -48,7 +48,7 @@
 - (IBAction)doneEdit;
 - (IBAction)didEditingChanged: (id)sender;
 
-- (void)resetForManagedComic: (Comic*)managedComic andCoverImage:(UIImage*)coverImage;
+- (void)resetForExistingComic: (ComicData*)existingComic;
 - (void)resetForNewComic;
 
 @end
