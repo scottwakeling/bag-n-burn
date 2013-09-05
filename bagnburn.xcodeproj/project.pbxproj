@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D234753817BCDF600027E871 /* BagBurnSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = D234753717BCDF600027E871 /* BagBurnSwitch.m */; };
+		D26E9B5217C36ABB0004BC2B /* pullTabItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D26E9B5117C36ABB0004BC2B /* pullTabItem.png */; };
+		D26E9B5617C3B5AB0004BC2B /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = D26E9B5517C3B5AB0004BC2B /* iCarousel.m */; };
+		D26E9B5817C3B5EF0004BC2B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26E9B5717C3B5EF0004BC2B /* QuartzCore.framework */; };
+		D26E9B5B17C3B66C0004BC2B /* ComicCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26E9B5A17C3B66C0004BC2B /* ComicCoverViewController.m */; };
+		D27B457917CB9D9200A3B01A /* burnButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D27B457817CB9D9200A3B01A /* burnButton.png */; };
+		D27B457B17CFEAAC00A3B01A /* collTabItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D27B457A17CFEAAC00A3B01A /* collTabItem@2x.png */; };
+		D27B457D17CFEEC600A3B01A /* wishTabItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D27B457C17CFEEC600A3B01A /* wishTabItem@2x.png */; };
+		D27B457F17CFF12000A3B01A /* pullTabItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D27B457E17CFF12000A3B01A /* pullTabItem@2x.png */; };
+		D286220C17BE5FF9002CEB48 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D286220B17BE5FF9002CEB48 /* AudioToolbox.framework */; };
+		D286220F17BE6071002CEB48 /* tap.aif in Resources */ = {isa = PBXBuildFile; fileRef = D286220E17BE6071002CEB48 /* tap.aif */; };
+		D2C6CF5317C6976E001E7F59 /* ComicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C6CF5217C6976D001E7F59 /* ComicDetailViewController.m */; };
+		D2CD9E6317B8E18500640BCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2CD9E6217B8E18500640BCD /* UIKit.framework */; };
+		D2CD9E6517B8E18500640BCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2CD9E6417B8E18500640BCD /* Foundation.framework */; };
+		D2CD9E6717B8E18500640BCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2CD9E6617B8E18500640BCD /* CoreGraphics.framework */; };
+		D2CD9E6D17B8E18500640BCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2CD9E6B17B8E18500640BCD /* InfoPlist.strings */; };
+		D2CD9E6F17B8E18500640BCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CD9E6E17B8E18500640BCD /* main.m */; };
+		D2CD9E7317B8E18500640BCD /* ComicsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CD9E7217B8E18500640BCD /* ComicsAppDelegate.m */; };
+		D2CD9E7517B8E18500640BCD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D2CD9E7417B8E18500640BCD /* Default.png */; };
+		D2CD9E7717B8E18500640BCD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2CD9E7617B8E18500640BCD /* Default@2x.png */; };
+		D2CD9E7917B8E18500640BCD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2CD9E7817B8E18500640BCD /* Default-568h@2x.png */; };
+		D2CD9E7C17B8E18500640BCD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CD9E7A17B8E18500640BCD /* MainStoryboard.storyboard */; };
+		D2CD9E7F17B8E18500640BCD /* ComicsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CD9E7E17B8E18500640BCD /* ComicsMasterViewController.m */; };
+		D2CD9E8A17B8E98A00640BCD /* Comic.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CD9E8917B8E98A00640BCD /* Comic.m */; };
+		D2CD9E8D17B8EAEF00640BCD /* ComicDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CD9E8C17B8EAEF00640BCD /* ComicDataController.m */; };
+		D2CD9E9017B8F97800640BCD /* ComicEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CD9E8F17B8F97800640BCD /* ComicEditViewController.m */; };
+		D2CD9E9217B9173800640BCD /* icon-bnb-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = D2CD9E9117B9173800640BCD /* icon-bnb-57x57.png */; };
+		D2CD9E9417B9181A00640BCD /* icon-bnb-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = D2CD9E9317B9181A00640BCD /* icon-bnb-114x114.png */; };
+		D2CD9F0A17BA4B9B00640BCD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2CD9F0917BA4B9B00640BCD /* CoreData.framework */; };
+		D2CD9F0D17BA54C200640BCD /* bagnburn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2CD9F0B17BA54C200640BCD /* bagnburn.xcdatamodeld */; };
+		D2FE7F8617CA613D00C4FC01 /* collTabItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D2FE7F8517CA613D00C4FC01 /* collTabItem.png */; };
+		D2FE7F8817CA678500C4FC01 /* wishTabItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D2FE7F8717CA678500C4FC01 /* wishTabItem.png */; };
+		D2FEF5D517D76B2F00F683F1 /* ComicData.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FEF5D417D76B2F00F683F1 /* ComicData.m */; };
+		D2FEF5D817D78BF000F683F1 /* missing_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = D2FEF5D717D78BF000F683F1 /* missing_cover.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D234753517BCD1EB0027E871 /* 1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 1.1.xcdatamodel; sourceTree = "<group>"; };
+		D234753617BCDF600027E871 /* BagBurnSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BagBurnSwitch.h; sourceTree = "<group>"; };
+		D234753717BCDF600027E871 /* BagBurnSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BagBurnSwitch.m; sourceTree = "<group>"; };
+		D26BFDFB17BD06FA00A02511 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D26BFDFD17BD074000A02511 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D26E9B5117C36ABB0004BC2B /* pullTabItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pullTabItem.png; sourceTree = "<group>"; };
+		D26E9B5417C3B5AB0004BC2B /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		D26E9B5517C3B5AB0004BC2B /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		D26E9B5717C3B5EF0004BC2B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D26E9B5917C3B66B0004BC2B /* ComicCoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicCoverViewController.h; sourceTree = "<group>"; };
+		D26E9B5A17C3B66C0004BC2B /* ComicCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicCoverViewController.m; sourceTree = "<group>"; };
+		D27B457817CB9D9200A3B01A /* burnButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burnButton.png; sourceTree = "<group>"; };
+		D27B457A17CFEAAC00A3B01A /* collTabItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collTabItem@2x.png"; sourceTree = "<group>"; };
+		D27B457C17CFEEC600A3B01A /* wishTabItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wishTabItem@2x.png"; sourceTree = "<group>"; };
+		D27B457E17CFF12000A3B01A /* pullTabItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pullTabItem@2x.png"; sourceTree = "<group>"; };
+		D286220A17BE4543002CEB48 /* 1.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 1.2.xcdatamodel; sourceTree = "<group>"; };
+		D286220B17BE5FF9002CEB48 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D286220E17BE6071002CEB48 /* tap.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap.aif; sourceTree = "<group>"; };
+		D2C6CF5017C6704C001E7F59 /* 1.3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 1.3.xcdatamodel; sourceTree = "<group>"; };
+		D2C6CF5117C6976D001E7F59 /* ComicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicDetailViewController.h; sourceTree = "<group>"; };
+		D2C6CF5217C6976D001E7F59 /* ComicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicDetailViewController.m; sourceTree = "<group>"; };
+		D2CD9E5F17B8E18500640BCD /* bagnburn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bagnburn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2CD9E6217B8E18500640BCD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D2CD9E6417B8E18500640BCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2CD9E6617B8E18500640BCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D2CD9E6A17B8E18500640BCD /* bagnburn-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bagnburn-Info.plist"; sourceTree = "<group>"; };
+		D2CD9E6C17B8E18500640BCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D2CD9E6E17B8E18500640BCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D2CD9E7017B8E18500640BCD /* bagnburn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bagnburn-Prefix.pch"; sourceTree = "<group>"; };
+		D2CD9E7117B8E18500640BCD /* ComicsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComicsAppDelegate.h; sourceTree = "<group>"; };
+		D2CD9E7217B8E18500640BCD /* ComicsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComicsAppDelegate.m; sourceTree = "<group>"; };
+		D2CD9E7417B8E18500640BCD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D2CD9E7617B8E18500640BCD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D2CD9E7817B8E18500640BCD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D2CD9E7B17B8E18500640BCD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D2CD9E7D17B8E18500640BCD /* ComicsMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComicsMasterViewController.h; sourceTree = "<group>"; };
+		D2CD9E7E17B8E18500640BCD /* ComicsMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComicsMasterViewController.m; sourceTree = "<group>"; };
+		D2CD9E8817B8E98A00640BCD /* Comic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comic.h; sourceTree = "<group>"; };
+		D2CD9E8917B8E98A00640BCD /* Comic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comic.m; sourceTree = "<group>"; };
+		D2CD9E8B17B8EAEF00640BCD /* ComicDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicDataController.h; sourceTree = "<group>"; };
+		D2CD9E8C17B8EAEF00640BCD /* ComicDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicDataController.m; sourceTree = "<group>"; };
+		D2CD9E8E17B8F97800640BCD /* ComicEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicEditViewController.h; sourceTree = "<group>"; };
+		D2CD9E8F17B8F97800640BCD /* ComicEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicEditViewController.m; sourceTree = "<group>"; };
+		D2CD9E9117B9173800640BCD /* icon-bnb-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-bnb-57x57.png"; sourceTree = "<group>"; };
+		D2CD9E9317B9181A00640BCD /* icon-bnb-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-bnb-114x114.png"; sourceTree = "<group>"; };
+		D2CD9F0917BA4B9B00640BCD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D2CD9F0C17BA54C200640BCD /* bagnburn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bagnburn.xcdatamodel; sourceTree = "<group>"; };
+		D2FE7F8517CA613D00C4FC01 /* collTabItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collTabItem.png; sourceTree = "<group>"; };
+		D2FE7F8717CA678500C4FC01 /* wishTabItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wishTabItem.png; sourceTree = "<group>"; };
+		D2FEF5D317D76B2F00F683F1 /* ComicData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicData.h; sourceTree = "<group>"; };
+		D2FEF5D417D76B2F00F683F1 /* ComicData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicData.m; sourceTree = "<group>"; };
+		D2FEF5D617D77EDF00F683F1 /* 1.4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.4.xcdatamodel; sourceTree = "<group>"; };
+		D2FEF5D717D78BF000F683F1 /* missing_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missing_cover.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2CD9E5C17B8E18500640BCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D26E9B5817C3B5EF0004BC2B /* QuartzCore.framework in Frameworks */,
+				D286220C17BE5FF9002CEB48 /* AudioToolbox.framework in Frameworks */,
+				D2CD9F0A17BA4B9B00640BCD /* CoreData.framework in Frameworks */,
+				D2CD9E6317B8E18500640BCD /* UIKit.framework in Frameworks */,
+				D2CD9E6517B8E18500640BCD /* Foundation.framework in Frameworks */,
+				D2CD9E6717B8E18500640BCD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D255D0AB17BB776200286A95 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D2CD9F0B17BA54C200640BCD /* bagnburn.xcdatamodeld */,
+				D2CD9E8817B8E98A00640BCD /* Comic.h */,
+				D2CD9E8917B8E98A00640BCD /* Comic.m */,
+				D2CD9E8B17B8EAEF00640BCD /* ComicDataController.h */,
+				D2CD9E8C17B8EAEF00640BCD /* ComicDataController.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		D255D0AC17BB778000286A95 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D2CD9E7A17B8E18500640BCD /* MainStoryboard.storyboard */,
+				D2C6CF5117C6976D001E7F59 /* ComicDetailViewController.h */,
+				D2C6CF5217C6976D001E7F59 /* ComicDetailViewController.m */,
+				D2CD9E8E17B8F97800640BCD /* ComicEditViewController.h */,
+				D2CD9E8F17B8F97800640BCD /* ComicEditViewController.m */,
+				D2CD9E7D17B8E18500640BCD /* ComicsMasterViewController.h */,
+				D2CD9E7E17B8E18500640BCD /* ComicsMasterViewController.m */,
+				D234753617BCDF600027E871 /* BagBurnSwitch.h */,
+				D234753717BCDF600027E871 /* BagBurnSwitch.m */,
+				D26E9B5917C3B66B0004BC2B /* ComicCoverViewController.h */,
+				D26E9B5A17C3B66C0004BC2B /* ComicCoverViewController.m */,
+				D2FEF5D317D76B2F00F683F1 /* ComicData.h */,
+				D2FEF5D417D76B2F00F683F1 /* ComicData.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		D255D11917BBC03500286A95 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D2FEF5D717D78BF000F683F1 /* missing_cover.png */,
+				D27B457E17CFF12000A3B01A /* pullTabItem@2x.png */,
+				D27B457C17CFEEC600A3B01A /* wishTabItem@2x.png */,
+				D27B457A17CFEAAC00A3B01A /* collTabItem@2x.png */,
+				D27B457817CB9D9200A3B01A /* burnButton.png */,
+				D2FE7F8717CA678500C4FC01 /* wishTabItem.png */,
+				D2FE7F8517CA613D00C4FC01 /* collTabItem.png */,
+				D26E9B5117C36ABB0004BC2B /* pullTabItem.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		D26E9B5317C3B4C80004BC2B /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				D26E9B5417C3B5AB0004BC2B /* iCarousel.h */,
+				D26E9B5517C3B5AB0004BC2B /* iCarousel.m */,
+			);
+			name = iCarousel;
+			sourceTree = "<group>";
+		};
+		D286220D17BE605C002CEB48 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D286220E17BE6071002CEB48 /* tap.aif */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
+		D2CD9E5617B8E18500640BCD = {
+			isa = PBXGroup;
+			children = (
+				D26BFDFD17BD074000A02511 /* Default@2x.png */,
+				D26BFDFB17BD06FA00A02511 /* Default.png */,
+				D2CD9E9317B9181A00640BCD /* icon-bnb-114x114.png */,
+				D2CD9E9117B9173800640BCD /* icon-bnb-57x57.png */,
+				D2CD9E6817B8E18500640BCD /* bagnburn */,
+				D2CD9E6117B8E18500640BCD /* Frameworks */,
+				D2CD9E6017B8E18500640BCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2CD9E6017B8E18500640BCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2CD9E5F17B8E18500640BCD /* bagnburn.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2CD9E6117B8E18500640BCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D26E9B5717C3B5EF0004BC2B /* QuartzCore.framework */,
+				D286220B17BE5FF9002CEB48 /* AudioToolbox.framework */,
+				D2CD9F0917BA4B9B00640BCD /* CoreData.framework */,
+				D2CD9E6217B8E18500640BCD /* UIKit.framework */,
+				D2CD9E6417B8E18500640BCD /* Foundation.framework */,
+				D2CD9E6617B8E18500640BCD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2CD9E6817B8E18500640BCD /* bagnburn */ = {
+			isa = PBXGroup;
+			children = (
+				D26E9B5317C3B4C80004BC2B /* iCarousel */,
+				D286220D17BE605C002CEB48 /* sounds */,
+				D255D11917BBC03500286A95 /* images */,
+				D255D0AC17BB778000286A95 /* view */,
+				D255D0AB17BB776200286A95 /* model */,
+				D2CD9E7117B8E18500640BCD /* ComicsAppDelegate.h */,
+				D2CD9E7217B8E18500640BCD /* ComicsAppDelegate.m */,
+				D2CD9E6917B8E18500640BCD /* Supporting Files */,
+			);
+			path = bagnburn;
+			sourceTree = "<group>";
+		};
+		D2CD9E6917B8E18500640BCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2CD9E6A17B8E18500640BCD /* bagnburn-Info.plist */,
+				D2CD9E6B17B8E18500640BCD /* InfoPlist.strings */,
+				D2CD9E6E17B8E18500640BCD /* main.m */,
+				D2CD9E7017B8E18500640BCD /* bagnburn-Prefix.pch */,
+				D2CD9E7417B8E18500640BCD /* Default.png */,
+				D2CD9E7617B8E18500640BCD /* Default@2x.png */,
+				D2CD9E7817B8E18500640BCD /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2CD9E5E17B8E18500640BCD /* bagnburn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2CD9E8517B8E18500640BCD /* Build configuration list for PBXNativeTarget "bagnburn" */;
+			buildPhases = (
+				D2CD9E5B17B8E18500640BCD /* Sources */,
+				D2CD9E5C17B8E18500640BCD /* Frameworks */,
+				D2CD9E5D17B8E18500640BCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bagnburn;
+			productName = bagnburn;
+			productReference = D2CD9E5F17B8E18500640BCD /* bagnburn.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2CD9E5717B8E18500640BCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PullList;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Scott Wakeling";
+			};
+			buildConfigurationList = D2CD9E5A17B8E18500640BCD /* Build configuration list for PBXProject "bagnburn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D2CD9E5617B8E18500640BCD;
+			productRefGroup = D2CD9E6017B8E18500640BCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2CD9E5E17B8E18500640BCD /* bagnburn */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2CD9E5D17B8E18500640BCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2CD9E6D17B8E18500640BCD /* InfoPlist.strings in Resources */,
+				D2CD9E7517B8E18500640BCD /* Default.png in Resources */,
+				D2CD9E7717B8E18500640BCD /* Default@2x.png in Resources */,
+				D2CD9E7917B8E18500640BCD /* Default-568h@2x.png in Resources */,
+				D2CD9E7C17B8E18500640BCD /* MainStoryboard.storyboard in Resources */,
+				D2CD9E9217B9173800640BCD /* icon-bnb-57x57.png in Resources */,
+				D2CD9E9417B9181A00640BCD /* icon-bnb-114x114.png in Resources */,
+				D286220F17BE6071002CEB48 /* tap.aif in Resources */,
+				D26E9B5217C36ABB0004BC2B /* pullTabItem.png in Resources */,
+				D2FE7F8617CA613D00C4FC01 /* collTabItem.png in Resources */,
+				D2FE7F8817CA678500C4FC01 /* wishTabItem.png in Resources */,
+				D27B457917CB9D9200A3B01A /* burnButton.png in Resources */,
+				D27B457B17CFEAAC00A3B01A /* collTabItem@2x.png in Resources */,
+				D27B457D17CFEEC600A3B01A /* wishTabItem@2x.png in Resources */,
+				D27B457F17CFF12000A3B01A /* pullTabItem@2x.png in Resources */,
+				D2FEF5D817D78BF000F683F1 /* missing_cover.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2CD9E5B17B8E18500640BCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2CD9E6F17B8E18500640BCD /* main.m in Sources */,
+				D2CD9E7317B8E18500640BCD /* ComicsAppDelegate.m in Sources */,
+				D2CD9E7F17B8E18500640BCD /* ComicsMasterViewController.m in Sources */,
+				D2CD9E8A17B8E98A00640BCD /* Comic.m in Sources */,
+				D2CD9E8D17B8EAEF00640BCD /* ComicDataController.m in Sources */,
+				D2CD9E9017B8F97800640BCD /* ComicEditViewController.m in Sources */,
+				D2CD9F0D17BA54C200640BCD /* bagnburn.xcdatamodeld in Sources */,
+				D234753817BCDF600027E871 /* BagBurnSwitch.m in Sources */,
+				D26E9B5617C3B5AB0004BC2B /* iCarousel.m in Sources */,
+				D26E9B5B17C3B66C0004BC2B /* ComicCoverViewController.m in Sources */,
+				D2C6CF5317C6976E001E7F59 /* ComicDetailViewController.m in Sources */,
+				D2FEF5D517D76B2F00F683F1 /* ComicData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D2CD9E6B17B8E18500640BCD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2CD9E6C17B8E18500640BCD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D2CD9E7A17B8E18500640BCD /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2CD9E7B17B8E18500640BCD /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2CD9E8317B8E18500640BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D2CD9E8417B8E18500640BCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2CD9E8617B8E18500640BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: SCOTT WAKELING (Q59249NAN8)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bagnburn/bagnburn-Prefix.pch";
+				INFOPLIST_FILE = "bagnburn/bagnburn-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D2CD9E8717B8E18500640BCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: SCOTT WAKELING (Q59249NAN8)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bagnburn/bagnburn-Prefix.pch";
+				INFOPLIST_FILE = "bagnburn/bagnburn-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2CD9E5A17B8E18500640BCD /* Build configuration list for PBXProject "bagnburn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2CD9E8317B8E18500640BCD /* Debug */,
+				D2CD9E8417B8E18500640BCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2CD9E8517B8E18500640BCD /* Build configuration list for PBXNativeTarget "bagnburn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2CD9E8617B8E18500640BCD /* Debug */,
+				D2CD9E8717B8E18500640BCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D2CD9F0B17BA54C200640BCD /* bagnburn.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D2FEF5D617D77EDF00F683F1 /* 1.4.xcdatamodel */,
+				D2C6CF5017C6704C001E7F59 /* 1.3.xcdatamodel */,
+				D286220A17BE4543002CEB48 /* 1.2.xcdatamodel */,
+				D234753517BCD1EB0027E871 /* 1.1.xcdatamodel */,
+				D2CD9F0C17BA54C200640BCD /* bagnburn.xcdatamodel */,
+			);
+			currentVersion = D2FEF5D617D77EDF00F683F1 /* 1.4.xcdatamodel */;
+			path = bagnburn.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D2CD9E5717B8E18500640BCD /* Project object */;
+}
