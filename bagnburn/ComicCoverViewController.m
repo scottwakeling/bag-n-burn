@@ -253,22 +253,11 @@
     }
 }
 
+
 //
-- (void)updateCurrentComicWithTitle:(NSString *)title publisher:(NSString *)publisher andCover:(UIImage *)coverImage {
+- (void)updateCurrentComicWithData:(ComicData *)comicData {
     
-    Comic* comic = (Comic*)[self.dataController comicAtIndex:carousel.currentItemIndex];
-    [comic setTitle:title];
-    [comic setPublisher:publisher];
-    [comic setCoverArt:[NSData dataWithData:UIImagePNGRepresentation(coverImage)]];
-    
-    //  Persist the updated Comic entity instance to the store
-    NSError *error = nil;
-    if (![self.dataController.managedObjectContext save:&error]) {
-        //  TODO: Failed to save! Handle the err0r!
-        NSLog(@"Failed to UPDATE comic: %@", error);
-    }
-    
-    //  Reflect any changes in the carousel
+    [self.dataController updateComic:comicData atIndex:carousel.currentItemIndex];
     [carousel reloadItemAtIndex:carousel.currentItemIndex animated:YES];
 }
 

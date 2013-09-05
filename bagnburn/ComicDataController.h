@@ -32,6 +32,7 @@ typedef enum {
 - (NSUInteger)countOfList;
 - (Comic *)comicAtIndex:(NSUInteger)index;
 - (void)addComic:(ComicData *)comicData atIndex:(int)index;
+- (void)updateComic:(ComicData *)comicData atIndex:(int)index;
 - (void)changeComicStatusAtIndex:(NSUInteger)index toStatus:(BOOL)status;
 - (void)deleteComicAtIndex:(NSUInteger)index;
 

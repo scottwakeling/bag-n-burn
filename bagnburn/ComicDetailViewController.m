@@ -87,7 +87,7 @@
         //  TODO: set other properties here when you have controls for them
         
         //  Notify our edit delegate, it has the data controller to do updates on
-        [self.editDelegate updateCurrentComicWithTitle:comicData.title publisher:comicData.publisher andCover:comicData.coverImage];
+        [self.editDelegate updateCurrentComicWithData:comicData];
     }
 }
 

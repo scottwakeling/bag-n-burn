@@ -18,7 +18,7 @@
 @protocol ComicEditDelegate <NSObject>
 - (void)doneEdit:(ComicData *)comicData;
 @optional
-- (void)updateCurrentComicWithTitle:(NSString *)title publisher:(NSString *)publisher andCover:(UIImage *)coverImage;
+- (void)updateCurrentComicWithData:(ComicData *)comicData;
 @end
 
 

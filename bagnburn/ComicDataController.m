@@ -83,6 +83,31 @@
 
 
 //
+- (void)updateComic:(ComicData *)comicData atIndex:(int)index {
+    
+    Comic* comic = (Comic*)[self comicAtIndex:index];
+    [comic setCoverArt:[NSData dataWithData:UIImagePNGRepresentation(comicData.coverImage)]]; //data!
+    [comic setTitle:comicData.title];
+    [comic setPublisher:comicData.publisher];
+    [comic setIssue:comicData.issue];
+    [comic setVolume:comicData.volume];
+    [comic setWriter:comicData.writer];
+    [comic setArtist:comicData.artist];
+    [comic setColourist:comicData.colourist];
+    [comic setLetterer:comicData.letterer];
+    [comic setNotes:comicData.notes];
+    [comic setBagOrBurn:[NSNumber numberWithBool:TRUE]];
+    
+    //  Persist the updated Comic entity instance to the store
+    NSError *error = nil;
+    if (![self.managedObjectContext save:&error]) {
+        //  TODO: Failed to save! Handle the err0r!
+        NSLog(@"Failed to UPDATE comic: %@", error);
+    }
+}
+
+
+//
 - (void)changeComicStatusAtIndex:(NSUInteger)index toStatus:(BOOL)status {
     if (index < [self countOfList]) {
         Comic* comic = (Comic*)[comicsArray objectAtIndex:index];
