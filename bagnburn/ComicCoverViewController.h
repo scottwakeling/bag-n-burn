@@ -18,12 +18,7 @@
 @property (nonatomic, strong) ComicDataController *dataController;
 @property (nonatomic, strong) IBOutlet iCarousel *carousel;
 
-@property (weak, nonatomic) IBOutlet UITabBar *tabBar;
-
-
-
 - (IBAction)confirmDeleteComic;
-
 - (void)doneEdit:(ComicData *)comicData;
 
 @end
