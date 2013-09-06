@@ -81,11 +81,11 @@
     [[cell detailTextLabel] setText:comic.publisher];
     cell.imageView.image = [UIImage imageWithData:[comic coverArt]];
     
-    BagBurnSwitch* bagBurnSwitch = [BagBurnSwitch new];
-    bagBurnSwitch.on = [comic.bagOrBurn boolValue];
-    bagBurnSwitch.comicIndex = indexPath.row;
-    [bagBurnSwitch addTarget:self action:@selector(comicDidChangeStatus:) forControlEvents:UIControlEventValueChanged];
-    cell.accessoryView = bagBurnSwitch;
+//    BagBurnSwitch* bagBurnSwitch = [BagBurnSwitch new];
+//    bagBurnSwitch.on = [comic.bagOrBurn boolValue];
+//    bagBurnSwitch.comicIndex = indexPath.row;
+//    [bagBurnSwitch addTarget:self action:@selector(comicDidChangeStatus:) forControlEvents:UIControlEventValueChanged];
+//    cell.accessoryView = bagBurnSwitch;
 
     return cell;
 }

@@ -56,6 +56,7 @@
     [viewController setTitle:@"Pull"];
     [viewController.tabBarItem setImage:[UIImage imageNamed:@"pullTabItem"]];
     [viewController.navigationItem setTitle:@"Pull List"];
+    [viewController.tabBarItem setBadgeValue:@"4"];
     dataController = [[ComicDataController alloc] initWithComicListType:CODComicListPull];
     viewController.dataController = dataController;
     [viewControllers addObject:navController];
@@ -76,6 +77,7 @@
     [viewController setTitle:@"Wish"];
     [viewController.tabBarItem setImage:[UIImage imageNamed:@"wishTabItem"]];
     [viewController.navigationItem setTitle:@"Wish List"];
+    [viewController.tabBarItem setBadgeValue:@"3"];
     dataController = [[ComicDataController alloc] initWithComicListType:CODComicListWish];
     viewController.dataController = dataController;
     [viewControllers addObject:navController];

@@ -145,10 +145,12 @@
     static const float CODComicCoverHeightInPoints = 312.f;
 
     static const float CODComicTitleOffsetY = -190.f;
-    static const float CODComicTitleFontSize = 20;
+    static const float CODComicTitleFontSize = 20.f;
     
     static const float CODComicPublisherOffsetY = -170.f;
-    static const float CODComicPublisherFontSize = 14;
+    static const float CODComicPublisherFontSize = 14.f;
+    
+    static const float CODComicCoverLabelPaddingY = 10.f;
     
     UILabel *titleLabel, *publisherLabel = nil;
     
@@ -160,8 +162,13 @@
         //recycled and used with other index values later
         view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CODComicCoverWidthInPoints, CODComicCoverHeightInPoints)];
         view.contentMode = UIViewContentModeScaleAspectFit;
+
         
-        titleLabel = [[UILabel alloc] initWithFrame:CGRectOffset(view.bounds, 0.f, CODComicTitleOffsetY)];
+        //  Title and Publisher share the vertical space above the comic cover image equally, minus
+        //  a small amount of padding above them (immediately below the navbar)
+        const CGFloat labelSpaceY = (self.view.bounds.size.height - view.bounds.size.height) - CODComicCoverLabelPaddingY;
+        
+        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.f, -labelSpaceY, view.bounds.size.width, labelSpaceY / 2)];
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.font = [titleLabel.font fontWithSize:CODComicTitleFontSize];
@@ -169,7 +176,7 @@
         titleLabel.tag = 1;
         [view addSubview:titleLabel];
         
-        publisherLabel = [[UILabel alloc] initWithFrame:CGRectOffset(view.bounds, 0.f, CODComicPublisherOffsetY)];
+        publisherLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.f, -labelSpaceY/2, view.bounds.size.width, labelSpaceY / 2)];
         publisherLabel.backgroundColor = [UIColor clearColor];
         publisherLabel.textAlignment = NSTextAlignmentCenter;
         publisherLabel.font = [publisherLabel.font fontWithSize:CODComicPublisherFontSize];
