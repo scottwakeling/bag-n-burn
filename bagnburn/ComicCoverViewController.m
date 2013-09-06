@@ -9,11 +9,11 @@
 #import "ComicCoverViewController.h"
 #import "ComicEditViewController.h"
 #import "ComicDetailViewController.h"
-
 #import "ComicDataController.h"
 #import "ComicsAppDelegate.h"
 #import "Comic.h"
 #import "ComicData.h"
+#import "ReflectionView.h"
 
 @interface ComicCoverViewController ()
 
@@ -143,13 +143,13 @@
 //
 - (UIView *)carousel:(iCarousel *)forCarousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 {
-    static const float CODComicCoverWidthInPoints = 204.f;
-    static const float CODComicCoverHeightInPoints = 312.f;
+    static const float CODComicCoverWidthInPoints = 196.f;
+    static const float CODComicCoverHeightInPoints = 300.f;
 
     static const float CODComicTitleFontSize = 20.f;
     static const float CODComicPublisherFontSize = 14.f;
     
-    static const float CODComicCoverLabelPaddingY = 10.f;
+    static const float CODComicCoverLabelPaddingY = 20.f;
     
     UILabel *titleLabel, *publisherLabel = nil;
     
@@ -159,9 +159,9 @@
         //don't do anything specific to the index within
         //this `if (view == nil) {...}` statement because the view will be
         //recycled and used with other index values later
-        view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CODComicCoverWidthInPoints, CODComicCoverHeightInPoints)];
-        view.contentMode = UIViewContentModeScaleAspectFit;
 
+        view = [[ReflectionView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CODComicCoverWidthInPoints, CODComicCoverHeightInPoints)];
+        view.contentMode = UIViewContentModeScaleToFill;
         
         //  Title and Publisher share the vertical space above the comic cover image equally, minus
         //  a small amount of padding above them (immediately below the navbar)
@@ -176,7 +176,7 @@
         titleLabel.hidden = (index != forCarousel.currentItemIndex);
         [view addSubview:titleLabel];
         
-        publisherLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.f, -labelSpaceY/2, view.bounds.size.width, labelSpaceY / 2)];
+        publisherLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.f, (-labelSpaceY/2)-5, view.bounds.size.width, labelSpaceY / 2)];
         publisherLabel.backgroundColor = [UIColor clearColor];
         publisherLabel.textAlignment = NSTextAlignmentCenter;
         publisherLabel.font = [publisherLabel.font fontWithSize:CODComicPublisherFontSize];
