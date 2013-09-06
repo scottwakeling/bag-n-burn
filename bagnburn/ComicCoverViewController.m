@@ -134,20 +134,19 @@
 #pragma mark -
 #pragma mark iCarousel methods
 
+//
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
     return [self.dataController countOfList];
 }
 
-- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
+//
+- (UIView *)carousel:(iCarousel *)forCarousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 {
     static const float CODComicCoverWidthInPoints = 204.f;
     static const float CODComicCoverHeightInPoints = 312.f;
 
-    static const float CODComicTitleOffsetY = -190.f;
     static const float CODComicTitleFontSize = 20.f;
-    
-    static const float CODComicPublisherOffsetY = -170.f;
     static const float CODComicPublisherFontSize = 14.f;
     
     static const float CODComicCoverLabelPaddingY = 10.f;
@@ -174,6 +173,7 @@
         titleLabel.font = [titleLabel.font fontWithSize:CODComicTitleFontSize];
         titleLabel.textColor = [UIColor whiteColor];
         titleLabel.tag = 1;
+        titleLabel.hidden = (index != forCarousel.currentItemIndex);
         [view addSubview:titleLabel];
         
         publisherLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.f, -labelSpaceY/2, view.bounds.size.width, labelSpaceY / 2)];
@@ -182,6 +182,7 @@
         publisherLabel.font = [publisherLabel.font fontWithSize:CODComicPublisherFontSize];
         publisherLabel.textColor = [UIColor whiteColor];
         publisherLabel.tag = 2;
+        publisherLabel.hidden = (index != forCarousel.currentItemIndex);
         [view addSubview:publisherLabel];
     }
     else
@@ -207,27 +208,26 @@
 }
 
 
-- (IBAction)confirmDeleteComic {
-    if (carousel.numberOfItems > 0)
-    {        
-        UIActionSheet *confirmBurn = [[UIActionSheet alloc] initWithTitle:@"Really burn this comic?" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Burn It!" otherButtonTitles:nil];
-        [confirmBurn setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
-        UITabBar *tabBar = self.parentViewController.tabBarController.tabBar;
-        [confirmBurn showFromTabBar:tabBar];
-    }
+//
+//  Hide the previous view title/publisher labels and show the current ones
+//  NOTE: previousIndex assumes forCarousel is always the same and only carousel
+- (void)carouselCurrentItemIndexDidChange:(iCarousel *)forCarousel {
+
+    static int previousIndex = 0;
+    
+    UIView *previousView = [forCarousel itemViewAtIndex:previousIndex];
+    [previousView viewWithTag:1].hidden = YES;
+    [previousView viewWithTag:2].hidden = YES;
+    
+    UIView *currentView = [forCarousel currentItemView];
+    [currentView viewWithTag:1].hidden = FALSE;
+    [currentView viewWithTag:2].hidden = FALSE;
+    
+    previousIndex = forCarousel.currentItemIndex;
 }
 
 
-- (void)deleteCurrentComic
-{
-    //  Delete from the carousel
-    NSInteger index = carousel.currentItemIndex;
-    [carousel removeItemAtIndex:index animated:YES];
-    //  Delete from the data model
-    [self.dataController deleteComicAtIndex:index];
-}
-
-
+//
 - (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
 {
     if (option == iCarouselOptionSpacing)
@@ -266,6 +266,27 @@
     
     [self.dataController updateComic:comicData atIndex:carousel.currentItemIndex];
     [carousel reloadItemAtIndex:carousel.currentItemIndex animated:YES];
+}
+
+//
+- (IBAction)confirmDeleteComic {
+    if (carousel.numberOfItems > 0)
+    {
+        UIActionSheet *confirmBurn = [[UIActionSheet alloc] initWithTitle:@"Really burn this comic?" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Burn It!" otherButtonTitles:nil];
+        [confirmBurn setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+        UITabBar *tabBar = self.parentViewController.tabBarController.tabBar;
+        [confirmBurn showFromTabBar:tabBar];
+    }
+}
+
+//
+- (void)deleteCurrentComic
+{
+    //  Delete from the carousel
+    NSInteger index = carousel.currentItemIndex;
+    [carousel removeItemAtIndex:index animated:YES];
+    //  Delete from the data model
+    [self.dataController deleteComicAtIndex:index];
 }
 
 
